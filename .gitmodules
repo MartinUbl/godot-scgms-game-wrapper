@@ -1,0 +1,10 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = https://github.com/godotengine/godot-cpp.git
+	branch = 4.2
+[submodule "scgms-wrappers"]
+	path = scgms-wrappers
+	url = https://github.com/SmartCGMS/wrappers.git
+[submodule "scgms-common"]
+	path = scgms-common
+	url = https://github.com/SmartCGMS/common.git
