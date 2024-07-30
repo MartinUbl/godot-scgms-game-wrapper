@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://djmc1w5pufmiu"]
+
+[ext_resource type="Script" path="res://SCGMSController.gd" id="1_b05ls"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 334.0
+offset_top = 26.0
+offset_right = 673.0
+offset_bottom = 76.0
+text = "No simulation running"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 221.0
+offset_bottom = 83.0
+text = "Start"
+
+[node name="StepButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 221.0
+offset_bottom = 143.0
+disabled = true
+text = "Step
+"
+
+[node name="CarbsButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 150.0
+offset_right = 221.0
+offset_bottom = 203.0
+disabled = true
+text = "Dose 30g carbs
+"
+
+[node name="InsulinButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 210.0
+offset_right = 221.0
+offset_bottom = 263.0
+disabled = true
+text = "Dose 5U insulin bolus
+"
+
+[node name="BasalHighButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 270.0
+offset_right = 221.0
+offset_bottom = 323.0
+disabled = true
+text = "Set basal to 3U/hr
+"
+
+[node name="BasalLowButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 330.0
+offset_right = 221.0
+offset_bottom = 383.0
+disabled = true
+text = "Set basal to 0U/hr
+"
+
+[node name="SCGMSController" type="Node2D" parent="."]
+script = ExtResource("1_b05ls")
+
+[node name="TerminateButton" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 390.0
+offset_right = 221.0
+offset_bottom = 443.0
+disabled = true
+text = "Terminate"
+
+[connection signal="pressed" from="StartButton" to="SCGMSController" method="_on_start_button_pressed"]
+[connection signal="pressed" from="StepButton" to="SCGMSController" method="_on_step_button_pressed"]
+[connection signal="pressed" from="CarbsButton" to="SCGMSController" method="_on_carbs_button_pressed"]
+[connection signal="pressed" from="InsulinButton" to="SCGMSController" method="_on_insulin_button_pressed"]
+[connection signal="pressed" from="BasalHighButton" to="SCGMSController" method="_on_basal_high_button_pressed"]
+[connection signal="pressed" from="BasalLowButton" to="SCGMSController" method="_on_basal_low_button_pressed"]
+[connection signal="pressed" from="TerminateButton" to="SCGMSController" method="_on_terminate_button_pressed"]

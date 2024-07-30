@@ -1,0 +1,19 @@
+[configuration]
+
+entry_symbol = "gdextension_init"
+compatibility_minimum = 4.2
+
+[libraries]
+
+windows.debug.x86_64 = "bin/godot-scgms-game-wrapper-debug.win.x86_64.dll"
+windows.release.x86_64 = "bin/godot-scgms-game-wrapper-release.win.x86_64.dll"
+linux.debug.x86_64 = "bin/godot-scgms-game-wrapper-debug.linux.x86_64.so"
+linux.release.x86_64 = "bin/godot-scgms-game-wrapper-release.linux.x86_64.so"
+
+# TODO:
+#linux.debug.arm64 = "bin/godot-scgms-game-wrapper-debug.linux.arm64.so"
+#linux.release.arm64 = "bin/godot-scgms-game-wrapper-release.linux.arm64.so"
+#linux.debug.rv64 = "bin/godot-scgms-game-wrapper-debug.linux.rv64.so"
+#linux.release.rv64 = "bin/godot-scgms-game-wrapper-release.linux.rv64.so"
+#macos.debug = "bin/TODO"
+#macos.release = "bin/TODO"
